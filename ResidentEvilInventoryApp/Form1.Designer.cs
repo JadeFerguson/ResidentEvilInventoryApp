@@ -28,68 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnWeapons = new System.Windows.Forms.Button();
+            this.btnFirstAid = new System.Windows.Forms.Button();
+            this.Ammo = new System.Windows.Forms.Button();
+            this.btnFuel = new System.Windows.Forms.Button();
+            this.btnHerbs = new System.Windows.Forms.Button();
+            this.btnSupplements = new System.Windows.Forms.Button();
+            this.btnMisc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnWeapons
             // 
-            this.button1.Location = new System.Drawing.Point(83, 86);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 52);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnWeapons.Location = new System.Drawing.Point(40, 70);
+            this.btnWeapons.Name = "btnWeapons";
+            this.btnWeapons.Size = new System.Drawing.Size(199, 68);
+            this.btnWeapons.TabIndex = 0;
+            this.btnWeapons.Text = "Weapons";
+            this.btnWeapons.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnFirstAid
             // 
-            this.button2.Location = new System.Drawing.Point(83, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 52);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnFirstAid.Location = new System.Drawing.Point(40, 178);
+            this.btnFirstAid.Name = "btnFirstAid";
+            this.btnFirstAid.Size = new System.Drawing.Size(199, 68);
+            this.btnFirstAid.TabIndex = 1;
+            this.btnFirstAid.Text = "First Aid";
+            this.btnFirstAid.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // Ammo
             // 
-            this.button3.Location = new System.Drawing.Point(83, 273);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(169, 52);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Ammo.Location = new System.Drawing.Point(40, 295);
+            this.Ammo.Name = "Ammo";
+            this.Ammo.Size = new System.Drawing.Size(199, 70);
+            this.Ammo.TabIndex = 2;
+            this.Ammo.Text = "Ammo";
+            this.Ammo.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnFuel
             // 
-            this.button4.Location = new System.Drawing.Point(327, 86);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(169, 52);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnFuel.Location = new System.Drawing.Point(307, 70);
+            this.btnFuel.Name = "btnFuel";
+            this.btnFuel.Size = new System.Drawing.Size(223, 68);
+            this.btnFuel.TabIndex = 3;
+            this.btnFuel.Text = "Fuel";
+            this.btnFuel.UseVisualStyleBackColor = true;
+            // 
+            // btnHerbs
+            // 
+            this.btnHerbs.Location = new System.Drawing.Point(312, 178);
+            this.btnHerbs.Name = "btnHerbs";
+            this.btnHerbs.Size = new System.Drawing.Size(218, 68);
+            this.btnHerbs.TabIndex = 4;
+            this.btnHerbs.Text = "Herbs";
+            this.btnHerbs.UseVisualStyleBackColor = true;
+            // 
+            // btnSupplements
+            // 
+            this.btnSupplements.Location = new System.Drawing.Point(314, 295);
+            this.btnSupplements.Name = "btnSupplements";
+            this.btnSupplements.Size = new System.Drawing.Size(216, 70);
+            this.btnSupplements.TabIndex = 5;
+            this.btnSupplements.Text = "Supplements";
+            this.btnSupplements.UseVisualStyleBackColor = true;
+            // 
+            // btnMisc
+            // 
+            this.btnMisc.Location = new System.Drawing.Point(580, 178);
+            this.btnMisc.Name = "btnMisc";
+            this.btnMisc.Size = new System.Drawing.Size(185, 68);
+            this.btnMisc.TabIndex = 6;
+            this.btnMisc.Text = "Misc.";
+            this.btnMisc.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMisc);
+            this.Controls.Add(this.btnSupplements);
+            this.Controls.Add(this.btnHerbs);
+            this.Controls.Add(this.btnFuel);
+            this.Controls.Add(this.Ammo);
+            this.Controls.Add(this.btnFirstAid);
+            this.Controls.Add(this.btnWeapons);
             this.Name = "Form1";
             this.Text = "Inventory";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnWeapons;
+        private Button btnFirstAid;
+        private Button Ammo;
+        private Button btnFuel;
+        private Button btnHerbs;
+        private Button btnSupplements;
+        private Button btnMisc;
     }
 }

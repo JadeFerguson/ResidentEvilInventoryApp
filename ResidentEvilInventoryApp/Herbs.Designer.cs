@@ -1,6 +1,6 @@
 ﻿namespace ResidentEvilInventoryApp
 {
-    partial class btnAddWeapon
+    partial class Herbs
     {
         /// <summary>
         /// Required designer variable.
@@ -28,56 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAddHerbs = new System.Windows.Forms.Button();
+            this.lstHerbs = new System.Windows.Forms.ListBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.lstWeapons = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // btnAdd
+            // btnAddHerbs
             // 
-            this.btnAdd.Location = new System.Drawing.Point(414, 76);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(322, 114);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAddHerbs.Location = new System.Drawing.Point(413, 53);
+            this.btnAddHerbs.Name = "btnAddHerbs";
+            this.btnAddHerbs.Size = new System.Drawing.Size(323, 102);
+            this.btnAddHerbs.TabIndex = 0;
+            this.btnAddHerbs.Text = "Add";
+            this.btnAddHerbs.UseVisualStyleBackColor = true;
+            // 
+            // lstHerbs
+            // 
+            this.lstHerbs.FormattingEnabled = true;
+            this.lstHerbs.ItemHeight = 37;
+            this.lstHerbs.Location = new System.Drawing.Point(48, 53);
+            this.lstHerbs.Name = "lstHerbs";
+            this.lstHerbs.Size = new System.Drawing.Size(269, 337);
+            this.lstHerbs.TabIndex = 1;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(414, 259);
+            this.btnDelete.Location = new System.Drawing.Point(413, 282);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(322, 117);
-            this.btnDelete.TabIndex = 1;
+            this.btnDelete.Size = new System.Drawing.Size(323, 108);
+            this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // lstWeapons
-            // 
-            this.lstWeapons.FormattingEnabled = true;
-            this.lstWeapons.ItemHeight = 37;
-            this.lstWeapons.Location = new System.Drawing.Point(44, 76);
-            this.lstWeapons.Name = "lstWeapons";
-            this.lstWeapons.Size = new System.Drawing.Size(297, 300);
-            this.lstWeapons.TabIndex = 2;
-            // 
-            // btnAddWeapon
+            // Herbs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lstWeapons);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Name = "btnAddWeapon";
-            this.Text = "Weapons";
+            this.Controls.Add(this.lstHerbs);
+            this.Controls.Add(this.btnAddHerbs);
+            this.Name = "Herbs";
+            this.Text = "Herbs";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Button btnAdd;
+        private Button btnAddHerbs;
+        private ListBox lstHerbs;
         private Button btnDelete;
-        private ListBox lstWeapons;
     }
 }
