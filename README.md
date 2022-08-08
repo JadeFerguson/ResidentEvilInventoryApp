@@ -2,7 +2,7 @@
 
 ## Getting Started
 - VS 2022
-- Inventory Database installed
+- [Inventory Database](Inventory.sql) installed
 - .NET 6
 
 You may need to change the DB connection string located in the InventoryContext class.
