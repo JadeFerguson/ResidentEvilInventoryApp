@@ -69,5 +69,47 @@ namespace ResidentEvilInventoryApp
 
             // or this will delete an item from the inventory
         }
+
+        private void btnFuel_Click(object sender, EventArgs e)
+        {
+            frmFuel fuelForm = new();
+            fuelForm.ShowDialog();
+        }
+
+        private void btnMisc_Click(object sender, EventArgs e)
+        {
+            frmMisc miscForm = new();
+            miscForm.ShowDialog();
+        }
+
+        private void btnHerbs_Click(object sender, EventArgs e)
+        {
+            frmHerbs herbsForm = new();
+            herbsForm.ShowDialog();
+        }
+
+        private void btnSupplements_Click(object sender, EventArgs e)
+        {
+            frmSupplements supplementsForm = new();
+            supplementsForm.ShowDialog();
+        }
+
+        private void Ammo_Click(object sender, EventArgs e)
+        {
+            frmAmmo frmAmmo = new();
+            frmAmmo.ShowDialog();
+        }
+
+        private void btnFirstAid_Click(object sender, EventArgs e)
+        {
+            frmFirstAid frmFirstAid = new();
+            frmFirstAid.ShowDialog();
+        }
+
+        private void btnWeapons_Click(object sender, EventArgs e)
+        {
+            frmWeapons frmWeapons = new();
+            frmWeapons.ShowDialog();
+        }
     }
 }

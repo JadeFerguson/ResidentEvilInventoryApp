@@ -1,6 +1,6 @@
 ﻿namespace ResidentEvilInventoryApp
 {
-    partial class FirstAid
+    partial class frmFirstAid
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@
             this.lstFirstAid.Size = new System.Drawing.Size(270, 337);
             this.lstFirstAid.TabIndex = 2;
             // 
-            // FirstAid
+            // frmFirstAid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,7 +68,7 @@
             this.Controls.Add(this.lstFirstAid);
             this.Controls.Add(this.btnDeleteFirstAid);
             this.Controls.Add(this.btnAddFirstAid);
-            this.Name = "FirstAid";
+            this.Name = "frmFirstAid";
             this.Text = "First Aid";
             this.ResumeLayout(false);
 
