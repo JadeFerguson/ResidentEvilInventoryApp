@@ -69,5 +69,11 @@ namespace ResidentEvilInventoryApp
 
             // or this will delete an item from the inventory
         }
+
+        private void btnFuel_Click(object sender, EventArgs e)
+        {
+            frmFuel fuelForm = new();
+            fuelForm.ShowDialog();
+        }
     }
 }

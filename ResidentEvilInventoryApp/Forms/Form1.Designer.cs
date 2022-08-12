@@ -39,79 +39,73 @@
             // 
             // btnWeapons
             // 
-            this.btnWeapons.Location = new System.Drawing.Point(667, 590);
-            this.btnWeapons.Margin = new System.Windows.Forms.Padding(2);
+            this.btnWeapons.Location = new System.Drawing.Point(1000, 873);
             this.btnWeapons.Name = "btnWeapons";
-            this.btnWeapons.Size = new System.Drawing.Size(133, 46);
+            this.btnWeapons.Size = new System.Drawing.Size(200, 68);
             this.btnWeapons.TabIndex = 0;
             this.btnWeapons.Text = "Weapons";
             this.btnWeapons.UseVisualStyleBackColor = true;
             // 
             // btnFirstAid
             // 
-            this.btnFirstAid.Location = new System.Drawing.Point(667, 505);
-            this.btnFirstAid.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFirstAid.Location = new System.Drawing.Point(1000, 747);
             this.btnFirstAid.Name = "btnFirstAid";
-            this.btnFirstAid.Size = new System.Drawing.Size(133, 46);
+            this.btnFirstAid.Size = new System.Drawing.Size(200, 68);
             this.btnFirstAid.TabIndex = 1;
             this.btnFirstAid.Text = "First Aid";
             this.btnFirstAid.UseVisualStyleBackColor = true;
             // 
             // Ammo
             // 
-            this.Ammo.Location = new System.Drawing.Point(667, 393);
-            this.Ammo.Margin = new System.Windows.Forms.Padding(2);
+            this.Ammo.Location = new System.Drawing.Point(1000, 582);
             this.Ammo.Name = "Ammo";
-            this.Ammo.Size = new System.Drawing.Size(133, 47);
+            this.Ammo.Size = new System.Drawing.Size(200, 70);
             this.Ammo.TabIndex = 2;
             this.Ammo.Text = "Ammo";
             this.Ammo.UseVisualStyleBackColor = true;
             // 
             // btnFuel
             // 
-            this.btnFuel.Location = new System.Drawing.Point(651, 11);
-            this.btnFuel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFuel.Location = new System.Drawing.Point(976, 16);
             this.btnFuel.Name = "btnFuel";
-            this.btnFuel.Size = new System.Drawing.Size(149, 46);
+            this.btnFuel.Size = new System.Drawing.Size(224, 68);
             this.btnFuel.TabIndex = 3;
             this.btnFuel.Text = "Fuel";
             this.btnFuel.UseVisualStyleBackColor = true;
+            this.btnFuel.Click += new System.EventHandler(this.btnFuel_Click);
             // 
             // btnHerbs
             // 
-            this.btnHerbs.Location = new System.Drawing.Point(655, 200);
-            this.btnHerbs.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHerbs.Location = new System.Drawing.Point(982, 296);
             this.btnHerbs.Name = "btnHerbs";
-            this.btnHerbs.Size = new System.Drawing.Size(145, 46);
+            this.btnHerbs.Size = new System.Drawing.Size(218, 68);
             this.btnHerbs.TabIndex = 4;
             this.btnHerbs.Text = "Herbs";
             this.btnHerbs.UseVisualStyleBackColor = true;
             // 
             // btnSupplements
             // 
-            this.btnSupplements.Location = new System.Drawing.Point(656, 296);
-            this.btnSupplements.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSupplements.Location = new System.Drawing.Point(984, 438);
             this.btnSupplements.Name = "btnSupplements";
-            this.btnSupplements.Size = new System.Drawing.Size(144, 47);
+            this.btnSupplements.Size = new System.Drawing.Size(216, 70);
             this.btnSupplements.TabIndex = 5;
             this.btnSupplements.Text = "Supplements";
             this.btnSupplements.UseVisualStyleBackColor = true;
             // 
             // btnMisc
             // 
-            this.btnMisc.Location = new System.Drawing.Point(677, 103);
-            this.btnMisc.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMisc.Location = new System.Drawing.Point(1016, 152);
             this.btnMisc.Name = "btnMisc";
-            this.btnMisc.Size = new System.Drawing.Size(123, 46);
+            this.btnMisc.Size = new System.Drawing.Size(184, 68);
             this.btnMisc.TabIndex = 6;
             this.btnMisc.Text = "Misc.";
             this.btnMisc.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 698);
+            this.ClientSize = new System.Drawing.Size(1272, 1033);
             this.Controls.Add(this.btnMisc);
             this.Controls.Add(this.btnSupplements);
             this.Controls.Add(this.btnHerbs);
@@ -119,7 +113,6 @@
             this.Controls.Add(this.Ammo);
             this.Controls.Add(this.btnFirstAid);
             this.Controls.Add(this.btnWeapons);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Form1_Load);
