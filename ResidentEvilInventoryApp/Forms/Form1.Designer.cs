@@ -45,6 +45,7 @@
             this.btnWeapons.TabIndex = 0;
             this.btnWeapons.Text = "Weapons";
             this.btnWeapons.UseVisualStyleBackColor = true;
+            this.btnWeapons.Click += new System.EventHandler(this.btnWeapons_Click);
             // 
             // btnFirstAid
             // 
@@ -54,6 +55,7 @@
             this.btnFirstAid.TabIndex = 1;
             this.btnFirstAid.Text = "First Aid";
             this.btnFirstAid.UseVisualStyleBackColor = true;
+            this.btnFirstAid.Click += new System.EventHandler(this.btnFirstAid_Click);
             // 
             // Ammo
             // 
@@ -63,6 +65,7 @@
             this.Ammo.TabIndex = 2;
             this.Ammo.Text = "Ammo";
             this.Ammo.UseVisualStyleBackColor = true;
+            this.Ammo.Click += new System.EventHandler(this.Ammo_Click);
             // 
             // btnFuel
             // 
@@ -82,6 +85,7 @@
             this.btnHerbs.TabIndex = 4;
             this.btnHerbs.Text = "Herbs";
             this.btnHerbs.UseVisualStyleBackColor = true;
+            this.btnHerbs.Click += new System.EventHandler(this.btnHerbs_Click);
             // 
             // btnSupplements
             // 
@@ -91,6 +95,7 @@
             this.btnSupplements.TabIndex = 5;
             this.btnSupplements.Text = "Supplements";
             this.btnSupplements.UseVisualStyleBackColor = true;
+            this.btnSupplements.Click += new System.EventHandler(this.btnSupplements_Click);
             // 
             // btnMisc
             // 
@@ -100,6 +105,7 @@
             this.btnMisc.TabIndex = 6;
             this.btnMisc.Text = "Misc.";
             this.btnMisc.UseVisualStyleBackColor = true;
+            this.btnMisc.Click += new System.EventHandler(this.btnMisc_Click);
             // 
             // Form1
             // 
