@@ -1,6 +1,6 @@
 ﻿namespace ResidentEvilInventoryApp
 {
-    partial class Ammo
+    partial class frmAmmo
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@
             this.btnDeleteAmmo.Text = "Delete";
             this.btnDeleteAmmo.UseVisualStyleBackColor = true;
             // 
-            // Ammo
+            // frmAmmo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,7 +68,7 @@
             this.Controls.Add(this.btnDeleteAmmo);
             this.Controls.Add(this.lstAmmo);
             this.Controls.Add(this.btnAddAmmo);
-            this.Name = "Ammo";
+            this.Name = "frmAmmo";
             this.Text = "Ammo";
             this.ResumeLayout(false);
 

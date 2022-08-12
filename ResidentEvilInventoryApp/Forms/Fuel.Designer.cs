@@ -1,6 +1,6 @@
 ﻿namespace ResidentEvilInventoryApp
 {
-    partial class Fuel
+    partial class frmFuel
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.btnAddFuel.TabIndex = 0;
             this.btnAddFuel.Text = "Add";
             this.btnAddFuel.UseVisualStyleBackColor = true;
+            this.btnAddFuel.Click += new System.EventHandler(this.btnAddFuel_Click);
             // 
             // lstFuel
             // 
@@ -50,6 +51,7 @@
             this.lstFuel.Name = "lstFuel";
             this.lstFuel.Size = new System.Drawing.Size(277, 337);
             this.lstFuel.TabIndex = 1;
+            this.lstFuel.SelectedIndexChanged += new System.EventHandler(this.lstFuel_SelectedIndexChanged);
             // 
             // btnDeleteFuel
             // 
@@ -60,7 +62,7 @@
             this.btnDeleteFuel.Text = "Delete";
             this.btnDeleteFuel.UseVisualStyleBackColor = true;
             // 
-            // Fuel
+            // frmFuel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,8 +70,9 @@
             this.Controls.Add(this.btnDeleteFuel);
             this.Controls.Add(this.lstFuel);
             this.Controls.Add(this.btnAddFuel);
-            this.Name = "Fuel";
+            this.Name = "frmFuel";
             this.Text = "Fuel";
+            this.Load += new System.EventHandler(this.frmFuel_Load);
             this.ResumeLayout(false);
 
         }

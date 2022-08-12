@@ -1,6 +1,6 @@
 ﻿namespace ResidentEvilInventoryApp
 {
-    partial class Herbs
+    partial class frmHerbs
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // Herbs
+            // frmHerbs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,7 +68,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lstHerbs);
             this.Controls.Add(this.btnAddHerbs);
-            this.Name = "Herbs";
+            this.Name = "frmHerbs";
             this.Text = "Herbs";
             this.ResumeLayout(false);
 

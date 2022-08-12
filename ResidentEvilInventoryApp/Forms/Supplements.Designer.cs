@@ -1,6 +1,6 @@
 ﻿namespace ResidentEvilInventoryApp
 {
-    partial class Supplements
+    partial class frmSupplements
     {
         /// <summary>
         /// Required designer variable.
@@ -61,7 +61,7 @@
             this.lstSupplements.Size = new System.Drawing.Size(270, 337);
             this.lstSupplements.TabIndex = 2;
             // 
-            // Supplements
+            // frmSupplements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,7 +69,7 @@
             this.Controls.Add(this.lstSupplements);
             this.Controls.Add(this.btnDeleteSupp);
             this.Controls.Add(this.btnAddSupp);
-            this.Name = "Supplements";
+            this.Name = "frmSupplements";
             this.Text = "Supplements";
             this.ResumeLayout(false);
 

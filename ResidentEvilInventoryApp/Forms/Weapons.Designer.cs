@@ -1,6 +1,6 @@
 ﻿namespace ResidentEvilInventoryApp
 {
-    partial class btnAddWeapon
+    partial class frmWeapons
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@
             this.lstWeapons.Size = new System.Drawing.Size(297, 300);
             this.lstWeapons.TabIndex = 2;
             // 
-            // btnAddWeapon
+            // frmWeapons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,7 +68,7 @@
             this.Controls.Add(this.lstWeapons);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Name = "btnAddWeapon";
+            this.Name = "frmWeapons";
             this.Text = "Weapons";
             this.ResumeLayout(false);
 

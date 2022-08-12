@@ -1,6 +1,6 @@
 ﻿namespace ResidentEvilInventoryApp
 {
-    partial class Misc
+    partial class frmMisc
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@
             this.lstMisc.Size = new System.Drawing.Size(272, 300);
             this.lstMisc.TabIndex = 2;
             // 
-            // Misc
+            // frmMisc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,7 +68,7 @@
             this.Controls.Add(this.lstMisc);
             this.Controls.Add(this.btnDeleteMisc);
             this.Controls.Add(this.btnAddMisc);
-            this.Name = "Misc";
+            this.Name = "frmMisc";
             this.Text = "Misc";
             this.ResumeLayout(false);
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ResidentEvilInventoryApp
 {
-    public partial class Supplements : Form
+    public partial class frmSupplements : Form
     {
-        public Supplements()
+        public frmSupplements()
         {
             InitializeComponent();
         }
