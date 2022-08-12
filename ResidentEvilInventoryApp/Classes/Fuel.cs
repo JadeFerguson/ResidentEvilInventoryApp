@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ResidentEvilInventoryApp.Classes
 {
-    internal class Fuel
+    public class Fuel
     {
-        string Gas { get; set; }
+        public string Gas { get; set; }
 
-        string Molitovs { get; set; }
+        public string Molitovs { get; set; }
     }
 }

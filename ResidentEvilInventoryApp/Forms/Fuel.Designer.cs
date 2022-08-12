@@ -41,6 +41,7 @@
             this.btnAddFuel.TabIndex = 0;
             this.btnAddFuel.Text = "Add";
             this.btnAddFuel.UseVisualStyleBackColor = true;
+            this.btnAddFuel.Click += new System.EventHandler(this.btnAddFuel_Click);
             // 
             // lstFuel
             // 
@@ -50,6 +51,7 @@
             this.lstFuel.Name = "lstFuel";
             this.lstFuel.Size = new System.Drawing.Size(277, 337);
             this.lstFuel.TabIndex = 1;
+            this.lstFuel.SelectedIndexChanged += new System.EventHandler(this.lstFuel_SelectedIndexChanged);
             // 
             // btnDeleteFuel
             // 
@@ -70,6 +72,7 @@
             this.Controls.Add(this.btnAddFuel);
             this.Name = "frmFuel";
             this.Text = "Fuel";
+            this.Load += new System.EventHandler(this.frmFuel_Load);
             this.ResumeLayout(false);
 
         }
