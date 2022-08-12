@@ -33,12 +33,14 @@ namespace ResidentEvilInventoryApp
             PopulateFuelListBox();
         }
 
-        private void btnAddFuel_Click(object sender, EventArgs e)
+        public void btnAddFuel_Click(object sender, EventArgs e)
         {
             InventoryContext dbContext = new();
-
+            
             string chosenItem = (string)lstFuel.SelectedItem;
-            dbContext.Add(chosenItem);
+            var fuel = new UserInventory { Fuel = chosenItem };
+            dbContext.UserInventories.Add(fuel);
+            dbContext.SaveChanges();
         }
     }
 }
