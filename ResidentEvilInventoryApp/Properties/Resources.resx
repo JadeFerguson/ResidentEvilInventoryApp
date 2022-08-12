@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Doom Style Industrial Metal - Torn Flesh -- Royalty Free No Copyright Background Music" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\music\doom style industrial metal - torn flesh -- royalty free no copyright background music.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Doom_Style_Industrial_Metal___Torn_Flesh____Royalty_Free_No_Copyright_Background_Music" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\music\doom_style_industrial_metal_-_torn_flesh_--_royalty_free_no_copyright_background_music.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Resident Evil 4 - Sound Effect" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\music\resident evil 4 - sound effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
