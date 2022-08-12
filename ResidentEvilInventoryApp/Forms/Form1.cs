@@ -60,7 +60,7 @@ namespace ResidentEvilInventoryApp
         private void MyNewGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // this will play a sound each time it is clicked
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer("Resident Evil 4 - Sound Effect.wav");
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Resident_Evil_4___Sound_Effect);
             player.Play();
 
             // on click this will either drop an item into a specific block or certain amount of blocks
