@@ -41,6 +41,7 @@
             this.btnAddAmmo.TabIndex = 0;
             this.btnAddAmmo.Text = "Add";
             this.btnAddAmmo.UseVisualStyleBackColor = true;
+            this.btnAddAmmo.Click += new System.EventHandler(this.btnAddAmmo_Click);
             // 
             // lstAmmo
             // 
@@ -70,6 +71,7 @@
             this.Controls.Add(this.btnAddAmmo);
             this.Name = "frmAmmo";
             this.Text = "Ammo";
+            this.Load += new System.EventHandler(this.frmAmmo_Load);
             this.ResumeLayout(false);
 
         }

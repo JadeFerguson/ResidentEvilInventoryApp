@@ -71,6 +71,7 @@
             this.Controls.Add(this.btnAddSupp);
             this.Name = "frmSupplements";
             this.Text = "Supplements";
+            this.Load += new System.EventHandler(this.frmSupplements_Load);
             this.ResumeLayout(false);
 
         }

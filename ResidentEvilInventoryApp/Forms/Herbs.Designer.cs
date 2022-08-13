@@ -41,6 +41,7 @@
             this.btnAddHerbs.TabIndex = 0;
             this.btnAddHerbs.Text = "Add";
             this.btnAddHerbs.UseVisualStyleBackColor = true;
+            this.btnAddHerbs.Click += new System.EventHandler(this.btnAddHerbs_Click);
             // 
             // lstHerbs
             // 
@@ -70,6 +71,7 @@
             this.Controls.Add(this.btnAddHerbs);
             this.Name = "frmHerbs";
             this.Text = "Herbs";
+            this.Load += new System.EventHandler(this.frmHerbs_Load);
             this.ResumeLayout(false);
 
         }
