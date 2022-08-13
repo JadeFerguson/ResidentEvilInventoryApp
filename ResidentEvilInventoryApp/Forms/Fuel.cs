@@ -33,7 +33,7 @@ namespace ResidentEvilInventoryApp
             PopulateFuelListBox();
         }
 
-        public void btnAddFuel_Click(object sender, EventArgs e)
+        private void btnAddFuel_Click(object sender, EventArgs e)
         {
             InventoryContext dbContext = new();
             
@@ -41,6 +41,12 @@ namespace ResidentEvilInventoryApp
             var fuel = new UserInventory { Fuel = chosenItem };
             dbContext.UserInventories.Add(fuel);
             dbContext.SaveChanges();
+
+            // for self to check how many things 
+            /*int count = (from inventory in dbContext.UserInventories
+                                select inventory).Count();
+            MessageBox.Show(count.ToString());*/
+            
         }
     }
 }
