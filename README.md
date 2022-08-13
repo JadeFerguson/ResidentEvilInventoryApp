@@ -10,3 +10,6 @@ By default it points to mssqllocaldb. If your Inventory script is not installed 
 ```csharp
 optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Inventory");
 ```
+
+### Some useful links
+[Adding to existing database](https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/existing-database?redirectedfrom=MSDN)
