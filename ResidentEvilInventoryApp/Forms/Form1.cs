@@ -7,6 +7,7 @@ namespace ResidentEvilInventoryApp
             InitializeComponent();
         }
 
+
         private System.Windows.Forms.DataGridView myNewGrid;  // Declare a grid for this form
         private List<ResidentEvilInventory> inventoryGrid; // Declare this here so that you can use it later to manipulate the cell contents
         private void Form1_Load(object sender, EventArgs e)
@@ -29,6 +30,10 @@ namespace ResidentEvilInventoryApp
             this.ResumeLayout(false);
             myNewGrid.Visible = true;
             LoadGridData();
+
+            //Playing the backround music
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Doom_Style_Industrial_Metal___Torn_Flesh____Royalty_Free_No_Copyright_Background_Music);
+            player.PlayLooping();
         }
 
         public class ResidentEvilInventory
