@@ -41,6 +41,7 @@
             this.btnAddFirstAid.TabIndex = 0;
             this.btnAddFirstAid.Text = "Add";
             this.btnAddFirstAid.UseVisualStyleBackColor = true;
+            this.btnAddFirstAid.Click += new System.EventHandler(this.btnAddFirstAid_Click);
             // 
             // btnDeleteFirstAid
             // 
@@ -59,6 +60,7 @@
             this.lstFirstAid.Name = "lstFirstAid";
             this.lstFirstAid.Size = new System.Drawing.Size(270, 337);
             this.lstFirstAid.TabIndex = 2;
+            this.lstFirstAid.SelectedIndexChanged += new System.EventHandler(this.lstFirstAid_SelectedIndexChanged);
             // 
             // frmFirstAid
             // 
@@ -70,6 +72,7 @@
             this.Controls.Add(this.btnAddFirstAid);
             this.Name = "frmFirstAid";
             this.Text = "First Aid";
+            this.Load += new System.EventHandler(this.frmFirstAid_Load);
             this.ResumeLayout(false);
 
         }

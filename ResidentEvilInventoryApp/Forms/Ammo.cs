@@ -16,5 +16,25 @@ namespace ResidentEvilInventoryApp
         {
             InitializeComponent();
         }
+
+        private void PopulateAmmoListBox()
+        {
+            lstAmmo.Items.Add("Bullets");
+        }
+
+        private void frmAmmo_Load(object sender, EventArgs e)
+        {
+            PopulateAmmoListBox();
+        }
+
+        private void btnAddAmmo_Click(object sender, EventArgs e)
+        {
+            InventoryContext dbContext = new();
+
+            string chosenItem = (string)lstAmmo.SelectedItem;
+            var ammo = new UserInventory { Ammo = chosenItem };
+            dbContext.UserInventories.Add(ammo);
+            dbContext.SaveChanges();
+        }
     }
 }
