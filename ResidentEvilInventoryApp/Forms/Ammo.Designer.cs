@@ -31,6 +31,7 @@
             this.btnAddAmmo = new System.Windows.Forms.Button();
             this.lstAmmo = new System.Windows.Forms.ListBox();
             this.btnDeleteAmmo = new System.Windows.Forms.Button();
+            this.lstRemoveAmmo = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnAddAmmo
@@ -47,9 +48,9 @@
             // 
             this.lstAmmo.FormattingEnabled = true;
             this.lstAmmo.ItemHeight = 37;
-            this.lstAmmo.Location = new System.Drawing.Point(40, 56);
+            this.lstAmmo.Location = new System.Drawing.Point(40, 29);
             this.lstAmmo.Name = "lstAmmo";
-            this.lstAmmo.Size = new System.Drawing.Size(281, 337);
+            this.lstAmmo.Size = new System.Drawing.Size(297, 189);
             this.lstAmmo.TabIndex = 1;
             // 
             // btnDeleteAmmo
@@ -60,12 +61,24 @@
             this.btnDeleteAmmo.TabIndex = 2;
             this.btnDeleteAmmo.Text = "Delete";
             this.btnDeleteAmmo.UseVisualStyleBackColor = true;
+            this.btnDeleteAmmo.Click += new System.EventHandler(this.btnDeleteAmmo_Click);
+            // 
+            // lstRemoveAmmo
+            // 
+            this.lstRemoveAmmo.FormattingEnabled = true;
+            this.lstRemoveAmmo.ItemHeight = 37;
+            this.lstRemoveAmmo.Location = new System.Drawing.Point(40, 249);
+            this.lstRemoveAmmo.Name = "lstRemoveAmmo";
+            this.lstRemoveAmmo.Size = new System.Drawing.Size(297, 189);
+            this.lstRemoveAmmo.TabIndex = 3;
+            this.lstRemoveAmmo.SelectedIndexChanged += new System.EventHandler(this.lstRemoveAmmo_SelectedIndexChanged);
             // 
             // frmAmmo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lstRemoveAmmo);
             this.Controls.Add(this.btnDeleteAmmo);
             this.Controls.Add(this.lstAmmo);
             this.Controls.Add(this.btnAddAmmo);
@@ -81,5 +94,6 @@
         private Button btnAddAmmo;
         private ListBox lstAmmo;
         private Button btnDeleteAmmo;
+        private ListBox lstRemoveAmmo;
     }
 }
