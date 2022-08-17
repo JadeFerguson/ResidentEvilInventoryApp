@@ -16,11 +16,11 @@ TABLES
 CREATE TABLE UserInventory
 (
 		UserId			tinyint			PRIMARY KEY IDENTITY
-		, Ammo			varchar(50)		NOT NULL
-		, FirstAid		varchar(50)		NOT NULL
-		, Fuel			varchar(50)		NOT NULL
-		, Herbs			varchar(50)		NOT NULL
-		, Misc			varchar(50)		NOT NULL
-		, Supplements	varchar(50)		NOT NULL
-		, Weapons		varchar(50)		NOT NULL
+		, Ammo			varchar(50)		NULL
+		, FirstAid		varchar(50)		NULL
+		, Fuel			varchar(50)		NULL
+		, Herbs			varchar(50)		NULL
+		, Misc			varchar(50)		NULL
+		, Supplements	varchar(50)		NULL
+		, Weapons		varchar(50)		NULL
 )
