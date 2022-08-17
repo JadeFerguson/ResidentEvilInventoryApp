@@ -16,7 +16,7 @@ namespace ResidentEvilInventoryApp
             this.SuspendLayout();
             myNewGrid.Parent = this;  // You have to set the parent manually so that the grid is displayed on the form
             myNewGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            myNewGrid.Location = new System.Drawing.Point(100, 100);  // You will need to calculate this postion based on your other controls.  
+            myNewGrid.Location = new System.Drawing.Point(100, 100);  // You will need to calculate this position based on your other controls.  
             myNewGrid.Name = "myNewGrid";
             myNewGrid.Size = new System.Drawing.Size(400, 400);  // You said you need the grid to be 12x12.  You can change the size here.
             myNewGrid.TabIndex = 0;
@@ -29,6 +29,11 @@ namespace ResidentEvilInventoryApp
             this.ResumeLayout(false);
             myNewGrid.Visible = true;
             LoadGridData();
+
+            //Playing the background music
+            //This needs work
+            //System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Doom_Style_Industrial_Metal___Torn_Flesh____Royalty_Free_No_Copyright_Background_Music);
+            //player.PlayLooping();
         }
 
         public class ResidentEvilInventory
