@@ -7,6 +7,7 @@ namespace ResidentEvilInventoryApp
             InitializeComponent();
         }
 
+
         private System.Windows.Forms.DataGridView myNewGrid;  // Declare a grid for this form
         private List<ResidentEvilInventory> inventoryGrid; // Declare this here so that you can use it later to manipulate the cell contents
         private void Form1_Load(object sender, EventArgs e)

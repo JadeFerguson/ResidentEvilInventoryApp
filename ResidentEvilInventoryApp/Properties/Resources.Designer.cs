@@ -61,13 +61,12 @@ namespace ResidentEvilInventoryApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static byte[] Doom_Style_Industrial_Metal___Torn_Flesh____Royalty_Free_No_Copyright_Background_Music {
+        internal static System.IO.UnmanagedMemoryStream Doom_Style_Industrial_Metal___Torn_Flesh____Royalty_Free_No_Copyright_Background_Music {
             get {
-                object obj = ResourceManager.GetObject("Doom Style Industrial Metal - Torn Flesh -- Royalty Free No Copyright Background " +
+                return ResourceManager.GetStream("Doom_Style_Industrial_Metal___Torn_Flesh____Royalty_Free_No_Copyright_Background_" +
                         "Music", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         
