@@ -22,9 +22,22 @@ namespace ResidentEvilInventoryApp
             lstAmmo.Items.Add("Bullets");
         }
 
+        private void PopulateDeleteAmmoListBox()
+        {
+            InventoryContext dbContext = new();
+            List<UserInventory> userInventories = (from item in dbContext.UserInventories
+                                                   where item.Ammo != null
+                                                   select item).ToList();
+            foreach (UserInventory item in userInventories)
+            {
+                lstRemoveAmmo.Items.Add(item);
+            }
+        }
+
         private void frmAmmo_Load(object sender, EventArgs e)
         {
             PopulateAmmoListBox();
+            PopulateDeleteAmmoListBox();
         }
 
         private void btnAddAmmo_Click(object sender, EventArgs e)
@@ -35,6 +48,21 @@ namespace ResidentEvilInventoryApp
             var ammo = new UserInventory { Ammo = chosenItem };
             dbContext.UserInventories.Add(ammo);
             dbContext.SaveChanges();
+        }
+
+        private void btnDeleteAmmo_Click(object sender, EventArgs e)
+        {
+            InventoryContext dbContext = new();
+
+            string chosenItem = (string)lstRemoveAmmo.SelectedItem;
+            var ammo = new UserInventory { Ammo = chosenItem };
+            dbContext.UserInventories.Remove(ammo);
+            dbContext.SaveChanges();
+        }
+
+        private void lstRemoveAmmo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
