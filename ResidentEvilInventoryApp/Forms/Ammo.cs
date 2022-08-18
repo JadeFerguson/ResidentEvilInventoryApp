@@ -30,7 +30,7 @@ namespace ResidentEvilInventoryApp
                                                    select item).ToList();
             foreach (UserInventory item in userInventories)
             {
-                lstRemoveAmmo.Items.Add(item);
+                lstRemoveAmmo.Items.Add(item.Ammo);
             }
         }
 
@@ -55,7 +55,8 @@ namespace ResidentEvilInventoryApp
             InventoryContext dbContext = new();
 
             string chosenItem = (string)lstRemoveAmmo.SelectedItem;
-            var ammo = new UserInventory { Ammo = chosenItem };
+            UserInventory ammo = dbContext.UserInventories.FirstOrDefault(ammo => ammo.Ammo == chosenItem);
+            //var ammo = new UserInventory { Ammo = chosenItem };
             dbContext.UserInventories.Remove(ammo);
             dbContext.SaveChanges();
         }
