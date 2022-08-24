@@ -46,14 +46,17 @@ namespace ResidentEvilInventoryApp
             PopulateDeleteHerbListBox();
         }
 
-        private void btnAddHerbs_Click(object sender, EventArgs e)
+        public void btnAddHerbs_Click(object sender, EventArgs e)
         {
             InventoryContext dbContext = new();
 
             string chosenItem = (string)lstHerbs.SelectedItem;
             var herb = new UserInventory { Herbs = chosenItem };
             dbContext.UserInventories.Add(herb);
+            lstRemoveHerb.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteHerbListBox();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -63,7 +66,9 @@ namespace ResidentEvilInventoryApp
             string chosenItem = (string)lstRemoveHerb.SelectedItem;
             UserInventory herb = dbContext.UserInventories.FirstOrDefault(herb => herb.Herbs == chosenItem);
             dbContext.UserInventories.Remove(herb);
+            lstRemoveHerb.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteHerbListBox();
         }
     }
 }

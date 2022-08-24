@@ -55,13 +55,15 @@ namespace ResidentEvilInventoryApp
             string chosenItem = (string)lstFuel.SelectedItem;
             var fuel = new UserInventory { Fuel = chosenItem };
             dbContext.UserInventories.Add(fuel);
+            lstRemoveFuel.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteFuelListBox();
 
             // for self to check how many things 
             /*int count = (from inventory in dbContext.UserInventories
                                 select inventory).Count();
             MessageBox.Show(count.ToString());*/
-            
+
         }
 
         private void btnDeleteFuel_Click(object sender, EventArgs e)
@@ -71,7 +73,9 @@ namespace ResidentEvilInventoryApp
             string chosenItem = (string)lstRemoveFuel.SelectedItem;
             UserInventory fuel = dbContext.UserInventories.FirstOrDefault(fuel => fuel.Fuel == chosenItem);
             dbContext.UserInventories.Remove(fuel);
+            lstRemoveFuel.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteFuelListBox();
         }
     }
 }

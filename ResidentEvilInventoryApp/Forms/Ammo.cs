@@ -49,7 +49,9 @@ namespace ResidentEvilInventoryApp
             string chosenItem = (string)lstAmmo.SelectedItem;
             var ammo = new UserInventory { Ammo = chosenItem };
             dbContext.UserInventories.Add(ammo);
+            lstRemoveAmmo.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteAmmoListBox();
         }
 
         private void btnDeleteAmmo_Click(object sender, EventArgs e)
@@ -60,7 +62,9 @@ namespace ResidentEvilInventoryApp
             UserInventory ammo = dbContext.UserInventories.FirstOrDefault(ammo => ammo.Ammo == chosenItem);
             //var ammo = new UserInventory { Ammo = chosenItem };
             dbContext.UserInventories.Remove(ammo);
+            lstRemoveAmmo.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteAmmoListBox();
         }
 
         private void lstRemoveAmmo_SelectedIndexChanged(object sender, EventArgs e)
