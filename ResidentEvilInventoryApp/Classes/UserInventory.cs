@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ResidentEvilInventoryApp
+namespace ResidentEvilInventoryApp.Classes
 {
     public partial class UserInventory
     {

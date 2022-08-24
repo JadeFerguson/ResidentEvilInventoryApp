@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using ResidentEvilInventoryApp.Classes;
 
-namespace ResidentEvilInventoryApp
+namespace ResidentEvilInventoryApp.Data
 {
     public partial class InventoryContext : DbContext
     {
@@ -11,8 +12,7 @@ namespace ResidentEvilInventoryApp
         {
         }
 
-        public InventoryContext(DbContextOptions<InventoryContext> options)
-            : base(options)
+        public InventoryContext(DbContextOptions<InventoryContext> options) : base(options)
         {
         }
 

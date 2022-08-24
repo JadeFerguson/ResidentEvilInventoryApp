@@ -35,18 +35,20 @@
             // 
             // btnAddMisc
             // 
-            this.btnAddMisc.Location = new System.Drawing.Point(418, 76);
+            this.btnAddMisc.Location = new System.Drawing.Point(279, 51);
+            this.btnAddMisc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddMisc.Name = "btnAddMisc";
-            this.btnAddMisc.Size = new System.Drawing.Size(308, 116);
+            this.btnAddMisc.Size = new System.Drawing.Size(205, 78);
             this.btnAddMisc.TabIndex = 0;
             this.btnAddMisc.Text = "Add";
             this.btnAddMisc.UseVisualStyleBackColor = true;
             // 
             // btnDeleteMisc
             // 
-            this.btnDeleteMisc.Location = new System.Drawing.Point(418, 263);
+            this.btnDeleteMisc.Location = new System.Drawing.Point(279, 178);
+            this.btnDeleteMisc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteMisc.Name = "btnDeleteMisc";
-            this.btnDeleteMisc.Size = new System.Drawing.Size(308, 113);
+            this.btnDeleteMisc.Size = new System.Drawing.Size(205, 76);
             this.btnDeleteMisc.TabIndex = 1;
             this.btnDeleteMisc.Text = "Delete";
             this.btnDeleteMisc.UseVisualStyleBackColor = true;
@@ -54,22 +56,25 @@
             // lstMisc
             // 
             this.lstMisc.FormattingEnabled = true;
-            this.lstMisc.ItemHeight = 37;
-            this.lstMisc.Location = new System.Drawing.Point(45, 76);
+            this.lstMisc.ItemHeight = 25;
+            this.lstMisc.Location = new System.Drawing.Point(30, 51);
+            this.lstMisc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstMisc.Name = "lstMisc";
-            this.lstMisc.Size = new System.Drawing.Size(272, 300);
+            this.lstMisc.Size = new System.Drawing.Size(183, 204);
             this.lstMisc.TabIndex = 2;
             // 
             // frmMisc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 304);
             this.Controls.Add(this.lstMisc);
             this.Controls.Add(this.btnDeleteMisc);
             this.Controls.Add(this.btnAddMisc);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMisc";
             this.Text = "Misc";
+            this.Load += new System.EventHandler(this.frmMisc_Load);
             this.ResumeLayout(false);
 
         }

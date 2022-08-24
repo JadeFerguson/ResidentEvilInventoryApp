@@ -16,5 +16,10 @@ namespace ResidentEvilInventoryApp
         {
             InitializeComponent();
         }
+
+        private void frmMisc_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
