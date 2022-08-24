@@ -27,9 +27,22 @@ namespace ResidentEvilInventoryApp
             lstWeapons.Items.Add("RPG");
         }
 
+        private void PopulateDeleteWeaponsListBox()
+        {
+            InventoryContext dbContext = new();
+            List<UserInventory> userInventories = (from item in dbContext.UserInventories
+                                                   where item.Weapons != null
+                                                   select item).ToList();
+            foreach (UserInventory item in userInventories)
+            {
+                lstRemoveWeapons.Items.Add(item.Weapons);
+            }
+        }
+
         private void frmWeapons_Load(object sender, EventArgs e)
         {
             PopulateWeaponsListBox();
+            PopulateDeleteWeaponsListBox();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -39,6 +52,16 @@ namespace ResidentEvilInventoryApp
             string chosenItem = (string)lstWeapons.SelectedItem;
             var weapon = new UserInventory { Weapons = chosenItem };
             dbContext.UserInventories.Add(weapon);
+            dbContext.SaveChanges();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            InventoryContext dbContext = new();
+
+            string chosenItem = (string)lstRemoveWeapons.SelectedItem;
+            UserInventory weapon = dbContext.UserInventories.FirstOrDefault(weapon => weapon.Weapons == chosenItem);
+            dbContext.UserInventories.Remove(weapon);
             dbContext.SaveChanges();
         }
     }

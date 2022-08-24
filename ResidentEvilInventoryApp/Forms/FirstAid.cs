@@ -23,6 +23,18 @@ namespace ResidentEvilInventoryApp
             lstFirstAid.Items.Add("First Aid spray");
         }
 
+        private void PopulateDeleteFirstAidListBox()
+        {
+            InventoryContext dbContext = new();
+            List<UserInventory> userInventories = (from item in dbContext.UserInventories
+                                                   where item.FirstAid != null
+                                                   select item).ToList();
+            foreach (UserInventory item in userInventories)
+            {
+                lstRemoveFirstAid.Items.Add(item.FirstAid);
+            }
+        }
+
         private void btnAddFirstAid_Click(object sender, EventArgs e)
         {
             InventoryContext dbContext = new();
@@ -42,6 +54,17 @@ namespace ResidentEvilInventoryApp
         private void frmFirstAid_Load(object sender, EventArgs e)
         {
             PopulateFirstAidListBox();
+            PopulateDeleteFirstAidListBox();
+        }
+
+        private void btnDeleteFirstAid_Click(object sender, EventArgs e)
+        {
+            InventoryContext dbContext = new();
+
+            string chosenItem = (string)lstRemoveFirstAid.SelectedItem;
+            UserInventory firstAid = dbContext.UserInventories.FirstOrDefault(firstAid => firstAid.FirstAid == chosenItem);
+            dbContext.UserInventories.Remove(firstAid);
+            dbContext.SaveChanges();
         }
     }
 }
