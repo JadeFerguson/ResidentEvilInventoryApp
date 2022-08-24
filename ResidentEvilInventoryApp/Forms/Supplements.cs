@@ -43,7 +43,9 @@ namespace ResidentEvilInventoryApp
             string chosenItem = (string)lstSupplements.SelectedItem;
             var supplement = new UserInventory { Supplements = chosenItem };
             dbContext.UserInventories.Add(supplement);
+            lstRemoveSupplements.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteSupplementsListBox();
         }
 
         private void frmSupplements_Load(object sender, EventArgs e)
@@ -59,7 +61,9 @@ namespace ResidentEvilInventoryApp
             string chosenItem = (string)lstRemoveSupplements.SelectedItem;
             UserInventory supplement = dbContext.UserInventories.FirstOrDefault(supplement => supplement.Supplements == chosenItem);
             dbContext.UserInventories.Remove(supplement);
+            lstRemoveSupplements.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteSupplementsListBox();
         }
     }
 }

@@ -44,7 +44,9 @@ namespace ResidentEvilInventoryApp
             string chosenItem = (string)lstFirstAid.SelectedItem;
             var firstAid = new UserInventory { FirstAid = chosenItem };
             dbContext.UserInventories.Add(firstAid);
+            lstRemoveFirstAid.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteFirstAidListBox();
 
         }
 
@@ -66,7 +68,14 @@ namespace ResidentEvilInventoryApp
             string chosenItem = (string)lstRemoveFirstAid.SelectedItem;
             UserInventory firstAid = dbContext.UserInventories.FirstOrDefault(firstAid => firstAid.FirstAid == chosenItem);
             dbContext.UserInventories.Remove(firstAid);
+            lstRemoveFirstAid.Items.Clear();
             dbContext.SaveChanges();
+            PopulateDeleteFirstAidListBox();
+        }
+
+        private void lstRemoveFirstAid_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
