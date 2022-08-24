@@ -22,6 +22,18 @@ namespace ResidentEvilInventoryApp
             lstSupplements.Items.Add("Supplement");
         }
 
+        private void PopulateDeleteSupplementsListBox()
+        {
+            InventoryContext dbContext = new();
+            List<UserInventory> userInventories = (from item in dbContext.UserInventories
+                                                   where item.Supplements != null
+                                                   select item).ToList();
+            foreach (UserInventory item in userInventories)
+            {
+                lstRemoveSupplements.Items.Add(item.Supplements);
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             InventoryContext dbContext = new();
@@ -35,6 +47,17 @@ namespace ResidentEvilInventoryApp
         private void frmSupplements_Load(object sender, EventArgs e)
         {
             PopulateSupplementsListBox();
+            PopulateDeleteSupplementsListBox();
+        }
+
+        private void btnDeleteSupp_Click(object sender, EventArgs e)
+        {
+            InventoryContext dbContext = new();
+
+            string chosenItem = (string)lstRemoveSupplements.SelectedItem;
+            UserInventory supplement = dbContext.UserInventories.FirstOrDefault(supplement => supplement.Supplements == chosenItem);
+            dbContext.UserInventories.Remove(supplement);
+            dbContext.SaveChanges();
         }
     }
 }
