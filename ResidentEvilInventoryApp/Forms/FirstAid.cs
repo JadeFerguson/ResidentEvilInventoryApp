@@ -41,6 +41,9 @@ namespace ResidentEvilInventoryApp
 
         private void btnAddFirstAid_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Resident_Evil_4___Sound_Effect);
+            player.Play();
+
             InventoryContext dbContext = new();
 
             string chosenItem = (string)lstFirstAid.SelectedItem;
@@ -65,6 +68,9 @@ namespace ResidentEvilInventoryApp
 
         private void btnDeleteFirstAid_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Resident_Evil_4___Sound_Effect);
+            player.Play();
+
             InventoryContext dbContext = new();
 
             string chosenItem = (string)lstRemoveFirstAid.SelectedItem;
