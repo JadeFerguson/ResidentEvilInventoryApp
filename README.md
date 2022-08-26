@@ -1,6 +1,6 @@
 # Resident Evil Inventory App
-Welcome to Raccon city, well actually a window version of Resident Evil. In this windows app 
-a user can pick different items from different categories to their inventory. So have some fun adding to your inventory
+Welcome to Raccon city, well actually a windows version of Resident Evil. In this windows app 
+a user can pick different items from different categories add add them to their inventory. So have some fun adding to your inventory
 and dont let a zombie bite you.
 
 ## Getting Started
