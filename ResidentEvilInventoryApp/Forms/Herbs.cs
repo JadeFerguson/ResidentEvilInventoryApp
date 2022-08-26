@@ -48,6 +48,9 @@ namespace ResidentEvilInventoryApp
 
         public void btnAddHerbs_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Resident_Evil_4___Sound_Effect);
+            player.Play();
+
             InventoryContext dbContext = new();
 
             string chosenItem = (string)lstHerbs.SelectedItem;
@@ -61,6 +64,9 @@ namespace ResidentEvilInventoryApp
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Resident_Evil_4___Sound_Effect);
+            player.Play();
+
             InventoryContext dbContext = new();
 
             string chosenItem = (string)lstRemoveHerb.SelectedItem;
