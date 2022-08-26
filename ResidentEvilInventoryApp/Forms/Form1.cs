@@ -1,3 +1,5 @@
+using NAudio.Wave;
+
 namespace ResidentEvilInventoryApp
 {
     public partial class StartForm : Form
@@ -5,12 +7,23 @@ namespace ResidentEvilInventoryApp
         public StartForm()
         {
             InitializeComponent();
+
+            backgroundMusic = new WaveFileReader(Properties.Resources.Doom_Style_Industrial_Metal___Torn_Flesh____Royalty_Free_No_Copyright_Background_Music);
+            out1 = new WaveOut();
+            out1.Init(backgroundMusic);
+            onclick = new WaveFileReader(Properties.Resources.Resident_Evil_4___Sound_Effect);
+            out2 = new WaveOut();
+            out2.Init(onclick);
         }
+        private WaveStream onclick;
+        private WaveOut out1;
+        private WaveStream backgroundMusic;
+        private WaveOut out2;
 
 
         private System.Windows.Forms.DataGridView myNewGrid;  // Declare a grid for this form
         private List<ResidentEvilInventory> inventoryGrid; // Declare this here so that you can use it later to manipulate the cell contents
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             myNewGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(myNewGrid)).BeginInit();
@@ -31,10 +44,9 @@ namespace ResidentEvilInventoryApp
             myNewGrid.Visible = true;
             LoadGridData();
 
-            //Playing the background music
-            //This needs work
-            //System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Doom_Style_Industrial_Metal___Torn_Flesh____Royalty_Free_No_Copyright_Background_Music);
-            //player.PlayLooping();
+            //This sets up the background music
+            backgroundMusic.CurrentTime = new TimeSpan(0, 0, 0, 0);
+            out1.Play();
         }
 
         public class ResidentEvilInventory
@@ -66,9 +78,8 @@ namespace ResidentEvilInventoryApp
         private void MyNewGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // this will play a sound each time it is clicked
-            System.Media.SoundPlayer player = new System.Media.SoundPlayer(Properties.Resources.Resident_Evil_4___Sound_Effect);
-            player.Play();
-
+            onclick.CurrentTime = new TimeSpan(0, 0, 0, 0);
+            out2.Play();
             // on click this will either drop an item into a specific block or certain amount of blocks
 
             // or this will pick up an item to move
