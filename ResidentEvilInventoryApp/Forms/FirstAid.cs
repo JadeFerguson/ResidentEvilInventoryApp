@@ -23,6 +23,8 @@ namespace ResidentEvilInventoryApp
         {
             lstFirstAid.Items.Add("First Aid Box");
             lstFirstAid.Items.Add("First Aid spray");
+            lstFirstAid.Items.Add("Chem fluid");
+
         }
 
         private void PopulateDeleteFirstAidListBox()
