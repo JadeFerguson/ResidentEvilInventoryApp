@@ -113,6 +113,8 @@ namespace ResidentEvilInventoryApp
         {
             frmMisc miscForm = new();
             miscForm.ShowDialog();
+
+            // Added to repopulate Invenotry List when user adds in each section
             PopulateInventoryListBox();
         }
 
