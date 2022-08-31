@@ -35,6 +35,8 @@
             this.btnHerbs = new System.Windows.Forms.Button();
             this.btnSupplements = new System.Windows.Forms.Button();
             this.btnMisc = new System.Windows.Forms.Button();
+            this.lstInventory = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnWeapons
@@ -107,11 +109,31 @@
             this.btnMisc.UseVisualStyleBackColor = true;
             this.btnMisc.Click += new System.EventHandler(this.btnMisc_Click);
             // 
+            // lstInventory
+            // 
+            this.lstInventory.FormattingEnabled = true;
+            this.lstInventory.ItemHeight = 37;
+            this.lstInventory.Location = new System.Drawing.Point(57, 741);
+            this.lstInventory.Name = "lstInventory";
+            this.lstInventory.Size = new System.Drawing.Size(571, 226);
+            this.lstInventory.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 681);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 37);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Inventory";
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1272, 1033);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lstInventory);
             this.Controls.Add(this.btnMisc);
             this.Controls.Add(this.btnSupplements);
             this.Controls.Add(this.btnHerbs);
@@ -123,6 +145,7 @@
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -135,5 +158,7 @@
         private Button btnHerbs;
         private Button btnSupplements;
         private Button btnMisc;
+        private ListBox lstInventory;
+        private Label label1;
     }
 }
