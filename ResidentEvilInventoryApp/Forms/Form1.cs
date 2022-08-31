@@ -1,4 +1,6 @@
 using NAudio.Wave;
+using ResidentEvilInventoryApp.Classes;
+using ResidentEvilInventoryApp.Data;
 
 namespace ResidentEvilInventoryApp
 {
@@ -47,6 +49,19 @@ namespace ResidentEvilInventoryApp
             //This sets up the background music
             backgroundMusic.CurrentTime = new TimeSpan(0, 0, 0, 0);
             out1.Play();
+
+            PopulateInventoryListBox();
+        }
+
+        private void PopulateInventoryListBox()
+        {
+            InventoryContext dbContext = new();
+            List<UserInventory> userInventories = (from item in dbContext.UserInventories
+                                                   select item).ToList();
+            foreach (UserInventory item in userInventories)
+            {
+                lstInventory.Items.Add(item);
+            }
         }
 
         public class ResidentEvilInventory
@@ -91,42 +106,49 @@ namespace ResidentEvilInventoryApp
         {
             frmFuel fuelForm = new();
             fuelForm.ShowDialog();
+            PopulateInventoryListBox();
         }
 
         private void btnMisc_Click(object sender, EventArgs e)
         {
             frmMisc miscForm = new();
             miscForm.ShowDialog();
+            PopulateInventoryListBox();
         }
 
         private void btnHerbs_Click(object sender, EventArgs e)
         {
             frmHerbs herbsForm = new();
             herbsForm.ShowDialog();
+            PopulateInventoryListBox();
         }
 
         private void btnSupplements_Click(object sender, EventArgs e)
         {
             frmSupplements supplementsForm = new();
             supplementsForm.ShowDialog();
+            PopulateInventoryListBox();
         }
 
         private void Ammo_Click(object sender, EventArgs e)
         {
             frmAmmo frmAmmo = new();
             frmAmmo.ShowDialog();
+            PopulateInventoryListBox();
         }
 
         private void btnFirstAid_Click(object sender, EventArgs e)
         {
             frmFirstAid frmFirstAid = new();
             frmFirstAid.ShowDialog();
+            PopulateInventoryListBox();
         }
 
         private void btnWeapons_Click(object sender, EventArgs e)
         {
             frmWeapons frmWeapons = new();
             frmWeapons.ShowDialog();
+            PopulateInventoryListBox();
         }
     }
 }
