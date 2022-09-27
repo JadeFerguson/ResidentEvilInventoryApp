@@ -10,7 +10,7 @@ and dont let a zombie bite you.
 ### Windows forms and how it works
 The start form consists of a grid and buttons that will open up a window to said category on button.
 
-![home screen](https://user-images.githubusercontent.com/103535266/186804545-77001962-1267-4924-9188-84ab2b3749a1.png)
+![Home screen](https://user-images.githubusercontent.com/103535266/186804545-77001962-1267-4924-9188-84ab2b3749a1.png)
 
 This is a the Herbs window form and is an example of window that will pop up for one the catoegories on buttons on the start form.
 A user can click from a list of predetermined items on top, then click the add button to add to their database. If a user wants to see what
