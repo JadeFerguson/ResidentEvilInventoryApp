@@ -3,11 +3,11 @@ Welcome to Raccon city, well actually a windows version of Resident Evil. In thi
 a user can pick different items from different categories add add them to their inventory. So have some fun adding to your inventory
 and dont let a zombie bite you.
 
-## Getting Started
+### Getting Started
 - Visual Studio 2022
 - .NET 6
 
-## Windows forms and how it works
+### Windows forms and how it works
 The start form consists of a grid and buttons that will open up a window to said category on button.
 
 ![home screen](https://user-images.githubusercontent.com/103535266/186804545-77001962-1267-4924-9188-84ab2b3749a1.png)
