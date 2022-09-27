@@ -21,6 +21,8 @@ namespace ResidentEvilInventoryApp
 
         private void PopulateFuelListBox()
         {
+            // Fuel items to choose from
+
             lstFuel.Items.Add("Fuel");
             lstFuel.Items.Add("Molitovs");
         }
